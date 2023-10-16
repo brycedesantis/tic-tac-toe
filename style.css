@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin-top: 200px;
+}
+
+.gameboard {
+    margin: auto;
+    width: 500px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    background-color: black;
+}
+
+.square {
+   cursor: pointer;
+   background-color: white;
+   font-size: 7em;
+   text-align: center;
+}
