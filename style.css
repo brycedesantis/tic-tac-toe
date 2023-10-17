@@ -7,6 +7,44 @@
     margin-top: 200px;
 }
 
+.blur {
+    filter: blur(5px);
+}
+
+.game-over-screen {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+}
+
+.end-screen {
+    margin: auto;
+    text-align: center;
+    color: wheat;
+}
+
+.end-screen > h2 {
+    padding-bottom: 10px;
+    font-size: 50px;
+}
+
+button {
+    padding: 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: teal;
+    color: wheat;
+    font-size: 22px;
+    cursor: pointer;
+}
+
 .gameboard {
     margin: auto;
     width: 500px;
