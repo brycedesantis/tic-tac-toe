@@ -12,7 +12,7 @@
     width: 500px;
     height: 500px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
     gap: 10px;
     background-color: black;
 }
