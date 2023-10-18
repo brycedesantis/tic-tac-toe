@@ -43,8 +43,12 @@ const game = (() => {
     let openSpaces = 9
     let winner = false
     
+    let display = document.querySelector('.display')
+    display.textContent = `${activePlayer.name}`
+
     function switchPlayer() {
         this.activePlayer === player1 ? this.activePlayer = player2 : this.activePlayer = player1
+        display.textContent = `${this.activePlayer.name}`
     }
 
     const winConditions = [
@@ -89,6 +93,8 @@ const game = (() => {
         container.classList.remove('blur')
         this.openSpaces = 9
         this.winner = false
+        this.activePlayer = player1
+        display.textContent = `${activePlayer.name}`
         domSquares.forEach((square, index) => {
             square.textContent = ''
             gameboard.board[index] = ''
