@@ -1,6 +1,19 @@
+:root {
+    --color-x: #CD533B;
+    --button-color: #C2EABD;
+    --color-o: #C0BABC;
+    --button-text: #C7AC92;
+}
+
+@font-face {
+    font-family: Indie Flower;
+    src: url(./assets/Indie_Flower/IndieFlower-Regular.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
+    font-family: Indie Flower;
 }
 
 h1 {
@@ -10,15 +23,26 @@ h1 {
 
 .display {
     text-align: center;
-    padding: 70px;
-    font-size: 35px;
+    padding: 50px;
+    font-size: 60px;
     font-weight: bold;
-    font-family: monospace;
+    font-family: Indie Flower;
     height: 1.2em;
 }
 
 .blur {
     filter: blur(5px);
+}
+
+.player-select{
+    position: fixed;
+    top: 50vh;
+    left: 45.76vw;
+    z-index: 2;
+}
+
+input[type="text"] {
+    width: 180px;
 }
 
 .game-over-screen {
@@ -47,8 +71,8 @@ button {
     padding: 30px;
     border-radius: 10px;
     border: none;
-    background-color: teal;
-    color: wheat;
+    background-color: var(--button-color);
+    color: var(--button-text);
     font-size: 22px;
     cursor: pointer;
 }
@@ -66,6 +90,14 @@ button {
 .square {
    cursor: pointer;
    background-color: white;
-   font-size: 7em;
+   font-size: 6em;
    text-align: center;
+}
+
+.x {
+    color: var(--color-x);
+}
+
+.o {
+    color: var(--color-o);
 }

@@ -16,6 +16,7 @@ const gameboard = (() => {
         square.addEventListener('click', () => {
             square.textContent = game.activePlayer.symbol
             board[index] = game.activePlayer.symbol
+            square.classList.add(game.activePlayer.symbol)
             square.style.pointerEvents = 'none'
             game.checkWinner()
             game.switchPlayer()
@@ -99,8 +100,16 @@ const game = (() => {
             square.textContent = ''
             gameboard.board[index] = ''
             square.style.pointerEvents = 'auto'
+            square.classList.remove(game.activePlayer.symbol)
         })
     }
+
+    let playGameScreen = document.querySelector('.player-select')
+    let startButton = document.querySelector('#play-button')
+    startButton.addEventListener('click', () => {
+        container.classList.remove('blur')
+        playGameScreen.style.display = 'none'
+    })
 
     return{
         activePlayer,
